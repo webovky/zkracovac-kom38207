@@ -1,6 +1,8 @@
 from . import app
+from .models import User
 from flask import render_template, request, redirect, url_for, session
 import functools
+from pony import db_session
 
 # from werkzeug.security import check_password_hash
 
@@ -19,7 +21,11 @@ def prihlasit(function):
 
 
 @app.route("/", methods=["GET"])
+@db_session
 def index():
+    with db_session:
+        for user in User.select():
+            temp.append()
     return render_template("base.html.j2")
 
 
