@@ -26,5 +26,23 @@
   href="http://github.com/spseol/startflask/">Githubu</a>.</p>
 
 
+
+<h1>Zkracovac</h1>
+
+<form method="POST">
+<p class="url"> URL pro zkrácení <br>
+    <input type="text" name="url" id = "url" size = "88"> <br>
+    <input type="submit" value = "Zkratit">
+    
+</form>
+
+{% if shortcut %}
+  <p class = "shortcut"> Zkratka <a herf= "/{{shortcut}}"> {{request.root_url + shortcut}}</a></p>
+{% endif %}}
+ 
+      
+
+
 {% endblock obsah %}
+
 

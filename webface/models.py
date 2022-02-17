@@ -1,5 +1,5 @@
 # from datetime import datetime
-from pony.orm import PrimaryKey, Required, Optional, Database  # , Set
+from pony.orm import PrimaryKey, Required, Optional, Database, Set
 
 
 db = Database()
@@ -21,3 +21,7 @@ class Addresses(db.Entity):
     user = Optional(User)
 
 db.generate_mapping(create_tables=True)
+
+"""
+shorcut = "".join([random.choice(string.ascii_letters) for i in range(7)])
+"""
